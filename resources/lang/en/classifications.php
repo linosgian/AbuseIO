@@ -2082,4 +2082,10 @@ return [
             This classification has no information text yet.
             ',
     ],
+    'DoS Detection' => [
+        'name'        => 'DoS Host Detection',
+        'description' => '
+            This error may relate to several types of misuses, such as IP Fragmentation, UDP, NTP Amplification.
+            ',
+    ],
 ];
