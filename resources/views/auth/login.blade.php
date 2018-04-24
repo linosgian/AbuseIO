@@ -5,6 +5,24 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
+				<div class="panel-heading">Login with <b>your organization credentials</b></div>
+				<div class="panel-body">
+					<div class="form-group">
+						<div class="col-md-6 col-md-offset-4">
+							<img src="https://rz.uni-greifswald.de/fileadmin/_processed_/8/5/csm_shibboleth_logo_b607b8e8ff.png" alt="Shibboleth logo" width="35%" height="35%">
+							<!-- Redirects user to /shib/*, where /shib/* is the protected resource by Shibboleth so user will login through IdP  -->
+							&nbsp;&nbsp;<a class="btn btn-link" href="{{ url('/shib/tickets') }}">
+								<button class="btn btn-primary">Shib Login</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
 				<div class="panel-heading">Login</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)

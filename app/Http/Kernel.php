@@ -42,5 +42,6 @@ class Kernel extends HttpKernel
         'apiaccountavailable' => \AbuseIO\Http\Middleware\ApiAccountAvailable::class,
         'apisystemaccount'    => \AbuseIO\Http\Middleware\ApiSystemAccount::class,
         'appendnotesubmitter' => \AbuseIO\Http\Middleware\AppendNoteSubmitter::class,
+        'shibauth'           => \AbuseIO\Http\Middleware\ShibbolethAuth::class,
     ];
 }

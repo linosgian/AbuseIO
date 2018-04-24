@@ -202,3 +202,15 @@ Route::group(
         );
     }
 );
+
+// Tickets for shibboleth authenticated users
+Route::group(
+    [
+        'prefix' => 'shib',
+        'as'     => 'shib.',
+    ],
+    function () {
+        require app_path().'/Http/Routes/ShibTickets.php';
+    }
+);
+
