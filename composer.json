@@ -23,6 +23,15 @@
 	"suggest": {
 		"ext-mcrypt": "Laravel / AbuseIO requirement"
 	},
+	"repositories":[
+		{
+			"type": "git",
+			"url": "https://repo.grnet.gr/diffusion/76/parser-geant.git"
+		},
+		{
+			"type": "git",
+			"url": "https://repo.grnet.gr/source/parser-peakflow/"
+		}],
 	"require": {
 		"php": ">=5.5.9",
 
@@ -69,6 +78,10 @@
 		"abuseio/parser-spamexperts": "1.3.*",
 		"abuseio/parser-webiron": "1.3.*",
 		"abuseio/parser-fbl": "1.3.*",
+		"abuseio/parser-sony": "^1.0",
+		"abuseio/parser-geant": "1.0.*",
+		"abuseio/parser-peakflow": "1.0.*",
+		"abuseio/parser-nfoservers": "1.0.*",
 
 		"abuseio/collector-common": "1.1.*",
 		"abuseio/collector-rbl": "1.3.*",
@@ -86,7 +99,6 @@
 		"jeremykendall/php-domain-parser": "^3.0",
 		"zendframework/zend-json": "^3.0",
 		"jover/singleton": "^1.0"
-
 	},
 	"require-dev": {
 		"fzaninotto/faker": "~1.4",
