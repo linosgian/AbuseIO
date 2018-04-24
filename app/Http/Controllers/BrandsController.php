@@ -300,8 +300,11 @@ class BrandsController extends Controller
         $finfo = new \finfo(FILEINFO_MIME_TYPE);
         $mimetype = $finfo->buffer($brand->logo);
 
-        return response($brand->logo)
-            ->header('Content-Type', $mimetype);
+        // Fixes a bug due to PHP not flushing the buffer before sending the request
+        $resp = response($brand->logo)->header('Content-Type', $mimetype);
+        ob_end_clean();
+        return $resp;
+
     }
 
     /**
