@@ -18,7 +18,20 @@
 		<!-- Custom css -->
 		<link rel="stylesheet" type="text/css" href="{{ asset('/css/custom.css') }}">
 	</head>
-	<body>
+	<body class="ash">
+		<div class="container">
+			<div class="jumbotron">
+				<div class="media">
+					<div class="media-left">
+						<img class="logo-grnet img-responsive img-inline" src="/ash/logo/{{ $brand->id  }}" alt='{{ $brand->company_name }}' />
+					</div>
+					<div class="media-body">
+						<h1>{{ trans('ash.title') }}</h1>
+						<h2>{{ $brand->company_name }}</h2>
+					</div>
+				</div>
+			</div>
+
 		<div class="container">
 			@if (Session::has('message'))
 				<div class="alert alert-info alert-dismissible">

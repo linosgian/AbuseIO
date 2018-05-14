@@ -11,6 +11,7 @@ use AbuseIO\Models\Event;
 use AbuseIO\Models\Evidence;
 use AbuseIO\Models\Incident;
 use AbuseIO\Models\Ticket;
+use AbuseIO\Models\Account;
 use DB;
 use Input;
 use Redirect;
@@ -125,8 +126,10 @@ class ShibTicketsController extends Controller
     {
         // Get translations for all statuses
         $statuses = Event::getStatuses();
+        $brand = Account::getSystemAccount()->active_brand;
 
         return view('shibtickets.index')
+            ->with('brand', $brand)
             ->with('types', Event::getTypes())
             ->with('classes', Event::getClassifications())
             ->with('statuses', $statuses['abusedesk'])
@@ -206,7 +209,9 @@ class ShibTicketsController extends Controller
         // Show the ticket only if the user has the right metadata
         $domain = $request->session()->get('domain');
         if (strpos($ticket->ip_contact_email, $domain) !== false){
+            $brand = Account::getSystemAccount()->active_brand;
             return view('shibtickets.show')
+                ->with('brand', $brand)
                 ->with('ticket', $ticket)
                 ->with('ticket_class', config("types.status.abusedesk.{$ticket->status_id}.class"))
                 ->with('contact_ticket_class', config("types.status.contact.{$ticket->contact_status_id}.class"));

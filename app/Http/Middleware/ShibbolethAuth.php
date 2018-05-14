@@ -30,8 +30,9 @@ class ShibbolethAuth
             abort(403, "Forbidden.");
         }
         if (!$request->session()->has('domain')){
-            // Example persistent-id input: https://vho.grnet.gr/idp/shibboleth!https://snf-791594.vm.okeanos.grnet.gr/
-            $idp_hostname = explode("!", $_SERVER["REDIRECT_persistent-id"])[0];
+            // Example Identity-Provider: https://vho.grnet.gr/idp/shibboleth
+            $idp_hostname = $_SERVER['REDIRECT_Shib-Identity-Provider'];
+            Log::debug($idp_hostname);
             $host = explode(".", parse_url($idp_hostname, PHP_URL_HOST));
 
             // Keep only the tld and the host, aka rip off the subdomains(e.g. grnet.gr)
