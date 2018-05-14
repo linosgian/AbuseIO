@@ -88,6 +88,24 @@ while database changes, e.g. by pagination */
     padding: 2px 0;
 }
 
+.logo-grnet{
+    padding-top: 20px;
+    margin-right: 45px;
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: 600px)  {
+    .logo-grnet{
+        display: none;
+    }
+
+    .media-body{
+       text-align: center;
+    }
+
+}
+
+
 /* pretty printing code */
 pre.prettyprint {
     border: 1px solid #ccc;

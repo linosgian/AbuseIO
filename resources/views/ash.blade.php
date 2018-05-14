@@ -16,7 +16,7 @@
         <div class="jumbotron">
             <div class="media">
                 <div class="media-left">
-                    <img class="img-responsive img-inline" src="/ash/logo/{{ $brand->id }}" alt='{{ $brand->company_name }}' />
+                  <img class="img-responsive logo-grnet img-inline" src="/ash/logo/{{ $brand->id }}" alt='{{ $brand->company_name }}' />
                 </div>
                 <div class="media-body">
                     <h1>{{ trans('ash.title') }}</h1>

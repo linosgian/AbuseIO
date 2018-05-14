@@ -4,7 +4,7 @@
  * Translations for AbuseIO Self Help (ash).
  */
 return [
-    'title' => 'AbuseIO Self-help',
+    'title' => 'AbuseIO Helper',
     'intro' => 'You are seeing this page because we have detected suspicious activities'.
                                        ' from your IP address, Domain name or E-Mail address. On this page you'.
                                        ' will find all the information about these activities and the underlying'.
